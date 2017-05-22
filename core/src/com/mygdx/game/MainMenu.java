@@ -35,7 +35,7 @@ public class MainMenu implements Screen {
         table = new Table();
         table.setFillParent(true);
         table.top();
-        table.add().height(Value.percentHeight(.35f, table));
+        table.add().height(Value.percentHeight(.45f, table));
         table.row();
         table.add(ui.getPlayButtonActor())
                 .width(Value.percentWidth(.5f, table))
@@ -105,10 +105,11 @@ public class MainMenu implements Screen {
         game.batch.draw(background.getBackground(), background.getBackgroundX(), 0, background.getWidth(), 1920);
         game.batch.draw(background.getReversebackground(), background.getReversebackgroundX(), 0 , background.getWidth(), 1920);
         game.batch.draw(ui.getBirdHeader(), 240, 1300, 600, 500);
+        game.batch.draw(ui.getAppTitle(), 60, 850, 1000, 800);
         game.batch.end();
 
         stage.draw();
-        table.debug();
+        //table.debug();
 
 
 

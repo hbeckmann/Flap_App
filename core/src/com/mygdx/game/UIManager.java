@@ -21,6 +21,7 @@ public class UIManager {
 
     private Texture birdHeader;
     private Texture playButtonTexture;
+    private Texture appTitle;
     private Button playButtonActor;
     private Button settingsButtonActor;
     private Button creditsButtonActor;
@@ -28,6 +29,7 @@ public class UIManager {
     public UIManager() {
         birdHeader = new Texture(Gdx.files.internal("frame_1.png"));
         playButtonTexture = new Texture(Gdx.files.internal("play_btn_out.png"));
+        appTitle = new Texture(Gdx.files.internal("title.png"));
         playButtonActor = new Button(
                 new SpriteDrawable(new Sprite(playButtonTexture)),
                 new SpriteDrawable(new Sprite(new Texture(Gdx.files.internal("play_btn_in.png"))))
@@ -60,6 +62,10 @@ public class UIManager {
 
     public Button getCreditsButtonActor() {
         return creditsButtonActor;
+    }
+
+    public Texture getAppTitle() {
+        return appTitle;
     }
 
     public void dispose() {
